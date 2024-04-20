@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" style="color-scheme: dark;">
+<head>
+    <link rel="stylesheet" href="../static/CSS/dashboard.css">
+    <link href="../static/CSS/timepicker.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../static/JS/dashboard.js"></script>
+    <script type="module" src="../static/JS/chart.js"></script>
+    <script type="module" src="../static/JS/timepicker.js"></script>
+    <script type="module" src="../static/JS/log-functions.js"></script>
+    
+
+
+    <title>Tracker: Track Your Progress</title>
+    <body class="chakra-ui-dark">
+        <div class="css-main">
+            <aside class="css-aside">
+                <img alt="Tracker Logo" loading="lazy" decoding="async" data-nimg="fill" sizes="100%" srcset="../static/IMG/logo.webp" style="height: auto; width: 100%; margin: 0 auto; display: block;">
+            
+               
+                <ul class="menu">
+                    <li class="menu-item active" id="dashboard">
+                      <a href="#">🏠 Dashboard</a>
+                    </li>
+                    <li class="menu-item" id="ai_analysis">
+                        <a href="#">🤖 AI Analysis</a>
+                    </li>
+                    <li class="menu-item" id="logging">
+                      <a href="#">📈 Progress Logging</a>
+                    </li>
+                    <li class="menu-item" id="logout">
+                        <a href="#">🚪 Logout</a>
+                    </li>
+                </ul>
+                  
+                 
+                  
+            </aside>
+
+
+            <!-- main content area -->
+            <div class="content-area">
+                <!-- new earnings box -->
+                <div class="today-progress-box">
+                    <input type="text" id="user_id" style="display: none;" value="{{ username }}"/>   
+                    <div class="number-select-box" style="display: flex; align-items: center; max-width: 300px;">
+                        <label for="number-select">Target :</label>
+                        <select id="number-select" style="width: 50px; height: 40px; margin-right: 20px; border: 1px solid #000; border-radius: 4px; margin-left: 15px;">
+                            <option value="6" selected>6</option>
+                        </select>
+                    
+                        <label for="days-select">Days :</label>
+                        <select id="days-select" style="width: 50px; height: 40px; border: 1px solid #000; border-radius: 4px; margin-left: 15px;">
+                            <option value="15" selected>15</option>
+                        </select>
+                    </div>
+                    
+                    <div class="separator"></div> 
+                              
+                    <div class="progress-title">Today's Info:
+                    </div>
+                    <div class="progress-amount">
+                        <span>⏰   0 hrs, 00 mins</span>
+                    </div>
+                    <div class="logtime">Total log time ⌛  : 0 day, 00 hrs, 00 mins</div>
+                </div>
+
+
+                
+
+                <div id="history-box" class="history-progress-box">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+
+                <div id="history-circle" class="history-progress-circle">
+                    <button id="tuneButton">Tune</button>
+                    <canvas id="myCircle"></canvas>
+                </div>
+               
+
+
+
+
+
+                <div class="study-log-box">
+                    <div class="study-log-header">
+                      <h2>Study Log</h2>
+                      <button id="addLog" class="add-study-log-btn">+</button>
+                    </div>
+                    <div id="logs-container">
+                        <h3>Recent Log</h2>
+                            <table id="recent-records-table">
+                                <thead>
+                                    <tr>
+                                        <th>Log ID</th>
+                                        <th>Log Hours</th>                                       
+                                        <th>Description</th>
+                                        <th>Log time</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-records-container">
+                                    <!-- Records will be inserted here by JavaScript -->
+                                </tbody>
+                            </table>
+                    </div>
+                    
+
+                </div>
+
+               
+
+                
+                
+                
+                
+
+
+
+            </div>
+
+           
+              
+        </div>
+       
+                       
+    </body>
+</head>
+</html>

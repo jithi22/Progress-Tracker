@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+*{ margin: 0;
+    padding: 0;
+    font-family: 'Monteserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #e9ffeb, #ffffff);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box{
+    background: white;
+    padding: 100px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.user-icon{
+    background-color: greenyellow;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -50px;
+}
+
+.user-icon i{
+    font-size: 40px;
+}
+
+.login{
+    width: 100%;
+}
+
+.form-group{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="text"].form-control, input[type="password"].form-control{
+    font-size: 16px;
+    outline: none;
+    /* border: none; */
+    width: calc(100% - 36px);
+    border: 2px solid #ccc;
+    padding: 16px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+
+
+}
+
+
+
+input[type="text"].form-control:hover, input[type="password"].form-control:hover{
+    border:  2px solid #c9f8bb;
+}
+
+input[type="text"].form-control:focus, input[type="password"].form-control:focus{
+    border:  2px solid #62f083;
+}
+
+input[type="text"].form-control:active, input[type="password"].form-control:active{
+    border:  2px solid #62f083;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button.full-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #60e763;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button.full-button:hover {
+    background-color: #52c653;
+}
+
+
+a {
+    color: #60e763;
+    text-decoration: none;
+}
+
